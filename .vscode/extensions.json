@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "mkhl.direnv",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "astro-build.astro-vscode",
+    "svelte.svelte-vscode"
+  ]
+}

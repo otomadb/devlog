@@ -1,0 +1,23 @@
+.env
+.direnv
+
+# Dependencies
+node_modules
+
+# log
+*.log
+logs/
+
+# Build output
+dist/
+_site/
+
+# Vercel
+.vercel/
+
+# VSCode
+.vscode/*.json
+!.vscode/extensions.json
+
+# Astro
+.astro/

@@ -1,0 +1,87 @@
+---
+import "the-new-css-reset";
+const { title = "devlog.otomadb.com", description = "devlog.otomadb.com" } =
+  Astro.props;
+---
+
+<meta charset="UTF-8" />
+<meta name="description" property="og:description" content={description} />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content={Astro.generator} />
+
+<meta name="og:type" content="website" />
+<meta name="og:title" content={title} />
+<meta name="og:site_name" content="devlog.otomadb.com" />
+<meta name="og:type" content="website" />
+<meta name="og:url" content="https://devlog.otomadb.com" />
+
+<meta name="twitter:title" content="devlog.otomadb.com" />
+<meta name="twitter:url" content="https://devlog.otomadb.com" />
+<meta name="twitter:site" content="@SnO2WMaN" />
+<title>{title}</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap"
+  rel="stylesheet"
+/>
+
+<style is:global>
+  :root {
+    --font-sans-serif: ui-sans-serif, system-ui, -apple-system,
+      BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+      "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", "Noto Color Emoji";
+    --font-serif: "Shippori Mincho B1", ui-serif, Georgia, Cambria,
+      "Times New Roman", Times, serif;
+
+    --font-title: var(--font-serif);
+    --font-content: var(--font-sans-serif);
+
+    --text-color: #f1f5f9;
+    --weak-text-color: #94a3b8;
+  }
+
+  body {
+    background-color: #0f172a;
+    overflow-y: scroll;
+
+    font-family: var(--font-sans-serif);
+    color: var(--text-color);
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --text-color: #0f172a;
+      --weak-text-color: #334155;
+    }
+
+    body {
+      background-color: #f8fafc;
+    }
+  }
+</style>
+
+<style lang="scss">
+  .container {
+    width: 100%;
+    main {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+  }
+</style>
+
+<body>
+  <header>
+    <span>OtoMADB 開発ログ</span>
+  </header>
+  <div class="container">
+    <main>
+      <slot />
+    </main>
+  </div>
+  <footer></footer>
+</body>

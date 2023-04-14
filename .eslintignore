@@ -1,0 +1,12 @@
+# direnv
+.direnv
+
+# build output
+dist/
+_site/
+
+# Vercel
+.vercel/
+
+# Astro
+.astro/

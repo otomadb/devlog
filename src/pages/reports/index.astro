@@ -1,0 +1,32 @@
+---
+import { getCollection, getEntryBySlug } from "astro:content";
+import NormalLayout from "~/layouts/RootLayout.astro";
+
+const posts = await getCollection("reports");
+---
+
+<style lang="scss">
+  article {
+    & > .slug {
+      & > span {
+        font-family: "Roboto Mono", monospace;
+      }
+    }
+  }
+</style>
+
+<NormalLayout>
+  <div>
+    {
+      posts.map((post) => (
+        <article>
+          <div class="slug">
+            <span>{post.slug}</span>
+          </div>
+          <h2>{post.data.title}</h2>
+          <a href={`/reports/${post.slug}`}>もっと読む</a>
+        </article>
+      ))
+    }
+  </div>
+</NormalLayout>
