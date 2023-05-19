@@ -3,10 +3,10 @@ lockfileVersion: '6.0'
 dependencies:
   '@astrojs/svelte':
     specifier: ^2.1.0
-    version: 2.1.0(astro@2.3.0)(svelte@3.58.0)(typescript@5.0.4)
+    version: 2.1.0(astro@2.3.0)(svelte@3.58.0)(typescript@5.0.4)(vite@4.3.5)
   '@astrojs/vercel':
     specifier: ^3.2.3
-    version: 3.2.3(astro@2.3.0)
+    version: 3.2.3(astro@2.3.0)(react@18.2.0)
   astro:
     specifier: ^2.3.0
     version: 2.3.0(sass@1.62.0)
@@ -29,10 +29,10 @@ dependencies:
 devDependencies:
   '@markuplint/astro-parser':
     specifier: ^3.6.2
-    version: 3.6.2
+    version: 3.6.2(@markuplint/ml-core@3.7.0)
   '@markuplint/svelte-parser':
     specifier: ^3.6.1
-    version: 3.6.1
+    version: 3.6.1(@markuplint/ml-core@3.7.0)
   '@typescript-eslint/eslint-plugin':
     specifier: ^5.58.0
     version: 5.58.0(@typescript-eslint/parser@5.58.0)(eslint@8.38.0)(typescript@5.0.4)
@@ -73,8 +73,8 @@ devDependencies:
     specifier: '2'
     version: 2.0.0
   prettier-plugin-astro:
-    specifier: ^0.8.0
-    version: 0.8.0
+    specifier: ^0.9.0
+    version: 0.9.0
   prettier-plugin-md-nocjsp:
     specifier: ^1.5.1
     version: 1.5.1(prettier@2.0.0)
@@ -160,14 +160,14 @@ packages:
       prismjs: 1.29.0
     dev: false
 
-  /@astrojs/svelte@2.1.0(astro@2.3.0)(svelte@3.58.0)(typescript@5.0.4):
+  /@astrojs/svelte@2.1.0(astro@2.3.0)(svelte@3.58.0)(typescript@5.0.4)(vite@4.3.5):
     resolution: {integrity: sha512-upfkscrNuZbQvqVB5EG38FPJCgHCxO/LOJLAap75rO/++c1T7ztbVru4uSYVBRJkzTDuH3TS52T8kFTVgHXx/g==}
     engines: {node: '>=16.12.0'}
     peerDependencies:
       astro: ^2.1.0
       svelte: ^3.54.0
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 2.2.0(svelte@3.58.0)
+      '@sveltejs/vite-plugin-svelte': 2.2.0(svelte@3.58.0)(vite@4.3.5)
       astro: 2.3.0(sass@1.62.0)
       svelte: 3.58.0
       svelte2tsx: 0.5.23(svelte@3.58.0)(typescript@5.0.4)
@@ -193,13 +193,13 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/vercel@3.2.3(astro@2.3.0):
+  /@astrojs/vercel@3.2.3(astro@2.3.0)(react@18.2.0):
     resolution: {integrity: sha512-JQFqSpaUxLVSFWNREMFmeVNwLuBexjZ3CrLnas5iSWncY4e4eFzZJsQBW28Dnf96bRwIdPNdOle0GYILkakueA==}
     peerDependencies:
       astro: ^2.2.1
     dependencies:
       '@astrojs/webapi': 2.1.1
-      '@vercel/analytics': 0.1.11
+      '@vercel/analytics': 0.1.11(react@18.2.0)
       '@vercel/nft': 0.22.6
       astro: 2.3.0(sass@1.62.0)
       fast-glob: 3.2.12
@@ -771,13 +771,13 @@ packages:
       - supports-color
     dev: false
 
-  /@markuplint/astro-parser@3.6.2:
+  /@markuplint/astro-parser@3.6.2(@markuplint/ml-core@3.7.0):
     resolution: {integrity: sha512-uQmIr3tMbIQv3PompHaqt4/9CZJBe/Ycc3TlqqBUfflldrOEkeXPvkLNladTkQZs8HOLz/19TrPFxratN3nPKg==}
     dependencies:
       '@astrojs/parser': 0.20.3
-      '@markuplint/html-parser': 3.6.1
+      '@markuplint/html-parser': 3.6.1(@markuplint/ml-core@3.7.0)
       '@markuplint/ml-ast': 3.1.0
-      '@markuplint/parser-utils': 3.6.1
+      '@markuplint/parser-utils': 3.6.1(@markuplint/ml-core@3.7.0)
       astro-eslint-parser: 0.13.3
       tslib: 2.5.0
     transitivePeerDependencies:
@@ -818,18 +818,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
       - typescript
-    dev: true
-
-  /@markuplint/html-parser@3.6.1:
-    resolution: {integrity: sha512-C92toyo8vQ16o75KljANUYncTG9pg3rYgfZKKtlgS+q1QJTEsISbC96mmRrOYYvpWmx5wFR6xPo9U0wUsYkg/Q==}
-    dependencies:
-      '@markuplint/ml-ast': 3.1.0
-      '@markuplint/parser-utils': 3.6.1
-      parse5: 7.1.2
-      tslib: 2.5.0
-    transitivePeerDependencies:
-      - '@markuplint/ml-core'
-      - supports-color
     dev: true
 
   /@markuplint/html-parser@3.6.1(@markuplint/ml-core@3.7.0):
@@ -933,19 +921,6 @@ packages:
       tslib: 2.5.0
     dev: true
 
-  /@markuplint/parser-utils@3.6.1:
-    resolution: {integrity: sha512-m8Ce2pxd3LDg9EZOTxnV9wRJO7tS/R81oJU0LFKg1DN7Wzvr2DVqBRtLjqg0ROoLtbsT7vvl49z81f54m5Z7kQ==}
-    peerDependencies:
-      '@markuplint/ml-core': 3.x
-    dependencies:
-      '@markuplint/ml-ast': 3.1.0
-      '@markuplint/types': 3.5.1
-      tslib: 2.5.0
-      uuid: 9.0.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /@markuplint/parser-utils@3.6.1(@markuplint/ml-core@3.7.0):
     resolution: {integrity: sha512-m8Ce2pxd3LDg9EZOTxnV9wRJO7tS/R81oJU0LFKg1DN7Wzvr2DVqBRtLjqg0ROoLtbsT7vvl49z81f54m5Z7kQ==}
     peerDependencies:
@@ -995,12 +970,12 @@ packages:
       html-entities: 2.3.3
     dev: true
 
-  /@markuplint/svelte-parser@3.6.1:
+  /@markuplint/svelte-parser@3.6.1(@markuplint/ml-core@3.7.0):
     resolution: {integrity: sha512-jRxbBKKUiTypb/VCwRK8EwkKbdmzum/QjXJsSwLcmokypoW510B3VuAx/jU494qZ/g6vyxAUIbRdpSX7SnFvqg==}
     dependencies:
-      '@markuplint/html-parser': 3.6.1
+      '@markuplint/html-parser': 3.6.1(@markuplint/ml-core@3.7.0)
       '@markuplint/ml-ast': 3.1.0
-      '@markuplint/parser-utils': 3.6.1
+      '@markuplint/parser-utils': 3.6.1(@markuplint/ml-core@3.7.0)
       svelte: 3.58.0
       tslib: 2.5.0
     transitivePeerDependencies:
@@ -1057,7 +1032,7 @@ packages:
       picomatch: 2.3.1
     dev: false
 
-  /@sveltejs/vite-plugin-svelte@2.2.0(svelte@3.58.0):
+  /@sveltejs/vite-plugin-svelte@2.2.0(svelte@3.58.0)(vite@4.3.5):
     resolution: {integrity: sha512-KDtdva+FZrZlyug15KlbXuubntAPKcBau0K7QhAIqC5SAy0uDbjZwoexDRx0L0J2T4niEfC6FnA9GuQQJKg+Aw==}
     engines: {node: ^14.18.0 || >= 16}
     peerDependencies:
@@ -1070,7 +1045,8 @@ packages:
       magic-string: 0.30.0
       svelte: 3.58.0
       svelte-hmr: 0.15.1(svelte@3.58.0)
-      vitefu: 0.2.4
+      vite: 4.3.5(sass@1.62.0)
+      vitefu: 0.2.4(vite@4.3.5)
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -1331,10 +1307,12 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@vercel/analytics@0.1.11:
+  /@vercel/analytics@0.1.11(react@18.2.0):
     resolution: {integrity: sha512-mj5CPR02y0BRs1tN3oZcBNAX9a8NxsIUl9vElDPcqxnMfP0RbRc9fI9Ud7+QDg/1Izvt5uMumsr+6YsmVHcyuw==}
     peerDependencies:
       react: ^16.8||^17||^18
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@vercel/nft@0.22.6:
@@ -3562,6 +3540,13 @@ packages:
     resolution: {integrity: sha512-9Ri+o0JYgehTaVBBDoMqIl8GXtbWg711O3srftcHhZ0dqnETqLaoIK0x17fUw9rFSlK/0NlsKe0Ahhyl5pXE2g==}
     dev: false
 
+  /loose-envify@1.4.0:
+    resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
+    hasBin: true
+    dependencies:
+      js-tokens: 4.0.0
+    dev: false
+
   /lower-case@2.0.2:
     resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
     dependencies:
@@ -4628,8 +4613,8 @@ packages:
       synckit: 0.8.5
     dev: false
 
-  /prettier-plugin-astro@0.8.0:
-    resolution: {integrity: sha512-kt9wk33J7HvFGwFaHb8piwy4zbUmabC8Nu+qCw493jhe96YkpjscqGBPy4nJ9TPy9pd7+kEx1zM81rp+MIdrXg==}
+  /prettier-plugin-astro@0.9.0:
+    resolution: {integrity: sha512-LZ47EzCz0RvJBzC2GhtP5MI4ygEci/N5z73MMWAZFIOfSrn53sWCz0pN2HDwDGI7tvGg5Q5dnaX4EBrzkdb2Hg==}
     engines: {node: ^14.15.0 || >=16.0.0, pnpm: '>=7.14.0'}
     dependencies:
       '@astrojs/compiler': 1.4.1
@@ -4703,6 +4688,13 @@ packages:
     resolution: {integrity: sha512-ARhCpm70fzdcvNQfPoy49IaanKkTlRWF2JMzqhcJbhSFRZv7nPTvZJdcY7301IPmvW+/p0RgIWnQDLJxifsQ7g==}
     engines: {node: '>=8'}
     dev: true
+
+  /react@18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      loose-envify: 1.4.0
+    dev: false
 
   /read-pkg-up@7.0.1:
     resolution: {integrity: sha512-zK0TB7Xd6JpCLmlLmufqykGE+/TlOePD6qKClNW7hHDKFh/J7/7gCWGR7joEQEW1bKq3a3yUZSObOoWLFQ4ohg==}
@@ -5665,15 +5657,6 @@ packages:
       sass: 1.62.0
     optionalDependencies:
       fsevents: 2.3.2
-    dev: false
-
-  /vitefu@0.2.4:
-    resolution: {integrity: sha512-fanAXjSaf9xXtOOeno8wZXIhgia+CZury481LsDaV++lSvcU2R9Ch2bPh3PYFyoHW+w9LqAeYRISVQjUIew14g==}
-    peerDependencies:
-      vite: ^3.0.0 || ^4.0.0
-    peerDependenciesMeta:
-      vite:
-        optional: true
     dev: false
 
   /vitefu@0.2.4(vite@4.3.5):
