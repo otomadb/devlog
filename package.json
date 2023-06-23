@@ -20,7 +20,7 @@
     "astro": "^2.3.0",
     "clsx": "^1.2.1",
     "sass": "^1.62.0",
-    "svelte": "^3.58.0",
+    "svelte": "^4.0.0",
     "remark-toc": "^8.0.1",
     "the-new-css-reset": "^1.8.4"
   },
