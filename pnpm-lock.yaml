@@ -74,17 +74,17 @@ devDependencies:
     specifier: ^4.1.5
     version: 4.1.5
   prettier:
-    specifier: '2'
-    version: 2.0.0
+    specifier: '3'
+    version: 3.0.0
   prettier-plugin-astro:
     specifier: ^0.11.0
     version: 0.11.0
   prettier-plugin-md-nocjsp:
     specifier: ^1.5.1
-    version: 1.5.1(prettier@2.0.0)
+    version: 1.5.1(prettier@3.0.0)
   prettier-plugin-svelte:
     specifier: ^2.10.0
-    version: 2.10.0(prettier@2.0.0)(svelte@3.58.0)
+    version: 2.10.0(prettier@3.0.0)(svelte@3.58.0)
   typescript:
     specifier: ^5.0.4
     version: 5.0.4
@@ -4797,28 +4797,22 @@ packages:
       synckit: 0.8.5
     dev: false
 
-  /prettier-plugin-md-nocjsp@1.5.1(prettier@2.0.0):
+  /prettier-plugin-md-nocjsp@1.5.1(prettier@3.0.0):
     resolution: {integrity: sha512-qJyt8otPPNetQEcsZEaS4BGSgGfrhX9CfvcUUauvHewaMMZDxWDU8GB1VkWHwhLZ4W9nDTfWxGPBce8Ot4Jaxg==}
     peerDependencies:
       prettier: 2.x
     dependencies:
-      prettier: 2.0.0
+      prettier: 3.0.0
     dev: true
 
-  /prettier-plugin-svelte@2.10.0(prettier@2.0.0)(svelte@3.58.0):
+  /prettier-plugin-svelte@2.10.0(prettier@3.0.0)(svelte@3.58.0):
     resolution: {integrity: sha512-GXMY6t86thctyCvQq+jqElO+MKdB09BkL3hexyGP3Oi8XLKRFaJP1ud/xlWCZ9ZIa2BxHka32zhHfcuU+XsRQg==}
     peerDependencies:
       prettier: ^1.16.4 || ^2.0.0
       svelte: ^3.2.0
     dependencies:
-      prettier: 2.0.0
+      prettier: 3.0.0
       svelte: 3.58.0
-    dev: true
-
-  /prettier@2.0.0:
-    resolution: {integrity: sha512-vI55PC+GFLOVtpwr2di1mYhJF36v+kztJov8sx3AmqbfdA+2Dhozxb+3e1hTgoV9lyhnVJFF3Z8GCVeMBOS1bA==}
-    engines: {node: '>=10.13.0'}
-    hasBin: true
     dev: true
 
   /prettier@2.8.8:
