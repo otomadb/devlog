@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@astrojs/svelte':
-    specifier: ^2.1.0
-    version: 2.2.0(astro@2.10.14)(svelte@3.59.2)(typescript@5.2.2)(vite@4.4.9)
+    specifier: ^3.0.0
+    version: 3.1.1(astro@2.10.14)(svelte@3.59.2)(typescript@5.2.2)(vite@4.4.9)
   '@astrojs/vercel':
     specifier: ^3.2.3
     version: 3.8.2(astro@2.10.14)(react@18.2.0)
@@ -174,17 +174,17 @@ packages:
       prismjs: 1.29.0
     dev: false
 
-  /@astrojs/svelte@2.2.0(astro@2.10.14)(svelte@3.59.2)(typescript@5.2.2)(vite@4.4.9):
-    resolution: {integrity: sha512-4kfh3GEIIOqH/wwTwLloRsZJ3z7rJ1eZWZ1oFrfEIjiQny5XqxyRJp/tUseKfaeDwKQGL+9t31ePTuwxx5oung==}
+  /@astrojs/svelte@3.1.1(astro@2.10.14)(svelte@3.59.2)(typescript@5.2.2)(vite@4.4.9):
+    resolution: {integrity: sha512-sPTe43zqFVvZq7qjCgT6vkOpMyKI0uEpqm/X3zSRse0Sn1ZyMEipes2KLmJQvPOZw3Zxy4+PX3E3Ns59hwRX1Q==}
     engines: {node: '>=16.12.0'}
     peerDependencies:
-      astro: ^2.5.0
-      svelte: ^3.54.0
+      astro: ^2.10.10
+      svelte: ^3.55.0 || ^4.0.0
     dependencies:
       '@sveltejs/vite-plugin-svelte': 2.4.5(svelte@3.59.2)(vite@4.4.9)
       astro: 2.10.14(@types/node@20.5.7)(sass@1.66.1)
       svelte: 3.59.2
-      svelte2tsx: 0.5.23(svelte@3.59.2)(typescript@5.2.2)
+      svelte2tsx: 0.6.20(svelte@3.59.2)(typescript@5.2.2)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -5730,11 +5730,11 @@ packages:
       svelte: 3.59.2
     dev: false
 
-  /svelte2tsx@0.5.23(svelte@3.59.2)(typescript@5.2.2):
-    resolution: {integrity: sha512-jYFnugTQRFmUpvLXPQrKzVYcW5ErT+0QCxg027Zx9BuvYefMZFuoBSTDYe7viPEFGrPPiLgT2m7f5n9khE7f7Q==}
+  /svelte2tsx@0.6.20(svelte@3.59.2)(typescript@5.2.2):
+    resolution: {integrity: sha512-zaSnHSERYceKxugFbjiZ3YiNcC2fNbVjpQ9qaE5hrYI4tIOX9ZqHS+I30Hp2HF+MVXLOVWVErgn/6pAlQNnheA==}
     peerDependencies:
-      svelte: ^3.24
-      typescript: ^4.1.2
+      svelte: ^3.55 || ^4.0.0-next.0 || ^4.0
+      typescript: ^4.9.4 || ^5.0.0
     dependencies:
       dedent-js: 1.0.1
       pascal-case: 3.1.2
