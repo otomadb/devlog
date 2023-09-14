@@ -16,7 +16,7 @@
   "type": "module",
   "dependencies": {
     "@astrojs/svelte": "^2.1.0",
-    "@astrojs/vercel": "^3.2.3",
+    "@astrojs/vercel": "^5.0.0",
     "astro": "^2.3.0",
     "clsx": "^1.2.1",
     "sass": "^1.62.0",
