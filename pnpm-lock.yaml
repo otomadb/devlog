@@ -15,8 +15,8 @@ dependencies:
     specifier: ^3.0.0
     version: 3.1.0(@types/node@20.5.7)(sass@1.66.1)
   clsx:
-    specifier: ^1.2.1
-    version: 1.2.1
+    specifier: ^2.0.0
+    version: 2.0.0
   remark-toc:
     specifier: ^8.0.1
     version: 8.0.1
@@ -2146,11 +2146,6 @@ packages:
 
   /cli-spinners@2.9.0:
     resolution: {integrity: sha512-4/aL9X3Wh0yiMQlE+eeRhWP6vclO3QRtw1JHKIT0FFUs5FjpFmESqtMvYZ0+lbzBw900b95mS0hohy+qn2VK/g==}
-    engines: {node: '>=6'}
-    dev: false
-
-  /clsx@1.2.1:
-    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
     engines: {node: '>=6'}
     dev: false
 
